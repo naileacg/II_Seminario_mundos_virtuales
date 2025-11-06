@@ -14,15 +14,44 @@ En este seminario se nos propone responder a una serie de cuestiones relacionand
 
 1. **¿Qué funciones se pueden usar en los scripts de Unity para llevar a cabo traslaciones, rotaciones y escalados?**
 
+Para traslaciones:
+- transform.position Asigna una posición absoluta en el espacio 3D
+- transform.Translate(Vector3 desplazamiento) Suma a la posición actual del objeto cada coordenada del vector pasado como argumento
+Para rotaciones:
+- transform.rotation = Quaternion.Euler(x, y, z) Rotación absoluta en grados
+- transform.Rotate(Vector3 ángulos) Rotación sumada a la rotación actual del objeto
+Para escalado:
+- transform.localScale Ajusta el tamaño en cada eje
+
+
 2. **Como trasladarías la cámara 2 metros en cada uno de los ejes y luego la rotas 30º alrededor del eje Y?. Rota la cámara alrededor del eje Y 30ª y desplázala 2 metros en cada uno de los ejes. ¿Obtendrías el mismo resultado en ambos casos?. Justifica el resultado**
+
+1 -> `transform.position += new Vector3(2f, 2f, 2f);` 
+
+  `transform.Rotate(0, 30f, 0);`
+
+2 -> `transform.Rotate(0, 30f, 0);`
+
+   `transform.position += new Vector3(2f, 2f, 2f);`
+
+El resultado no es el mismo ya que en el primer caso se mueve en la dirección marcada como “adelante” y posteriormente rota. Al contrario que el segundo caso, en el cual antes de moverse cambia esa cara(al rotar) y por ende la dirección y ya después ejecuta el desplazamiento en esa dirección.
 
 3. **Sitúa la esfera de radio 1 en el campo de visión de la cámara y configura un volumen de vista que la recorte parcialmente.**
 
+foto
+
 4. **Sitúa la esfera de radio 1 en el campo de visión de la cámara y configura el volumen de vista para que la deje fuera de la vista.**
 
+foto
+
 5. **Como puedes aumentar el ángulo de la cámara. Qué efecto tiene disminuir el ángulo de la cámara.**
+Con el método `camera.fieldOfView` se controla el ángulo de la visión de la cámara.
+- Aumentar el ángulo ( `> fieldOfView` ): la visión es más abierta, más objetos entran en el campo visual pero se distorsionan en mayor medida
+- Disminuir el ángulo ( `< fieldOfView` ): se obtiene un efecto zoom, se ve menos área pero los objetos se ven más grandes y menos distorsionados
+
 
 6. **Es correcta la siguiente afirmación: Para realizar la proyección al espacio 2D, en el inspector de la cámara, cambiaremos el valor de projection, asignándole el valor de orthographic**
+Sí, la afirmación es correcta. Si cambiamos la propiedad Projection de la cámara a Orthographic en el inspector de Unity, la cámara generará una vista sin perspectiva, que  muestra los objetos del mismo tamaño obviando la distancia a la que estén situados. En  el modo ortográfico, el espacio de visionado se comporta como una caja rectangular, mientras que en perspectiva lo hace en forma de pirámide truncada, causando que los objetos lejanos se vean más pequeños.
 
 7. **Especifica las rotaciones que se han indicado en los ejercicios previos con la utilidad quaternion.**
 
@@ -44,6 +73,6 @@ En este seminario se nos propone responder a una serie de cuestiones relacionand
 16. **Crea una escena en Unity con los siguientes elementos: cámara principal, plano base (como suelo) y tres cubos de distinto color (rojo, verde, azul) colocados en posiciones distintas en el espacio. Realiza un pequeño script de depuración adjunto a la cámara que permita visualizar en consola o en pantalla las matrices de transformación (Model, View, Projection) y sus resultados sobre un vértice de cada cubo.**
 
 17. **Dibujar en un programa de dibujo el recorrido de las coordenadas de un vértice específico del cubo rojo:**
-**Local → World → Camera/View → Clip → NDC → Viewport. Indicar cómo cambia su valor en cada espacio. Aplicar la transformación manualmente a un punto (por ejemplo, el vértice (0.5, 0.5, 0.5)) y registrar los resultados paso a paso.**
+`Local → World → Camera/View → Clip → NDC → Viewport`. **Indicar cómo cambia su valor en cada espacio. Aplicar la transformación manualmente a un punto (por ejemplo, el vértice (0.5, 0.5, 0.5)) y registrar los resultados paso a paso.**
 
 18. **Mover o rotar uno de los cubos y mostrar cómo cambian los valores de su matriz de modelo. Rotar la cámara y mostrar cómo se modifica la matriz de vista. Cambiar entre proyección ortográfica y perspectiva y comparar las diferencias numéricas en la matriz de proyección.**
