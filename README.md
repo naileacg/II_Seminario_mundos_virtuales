@@ -16,10 +16,10 @@ En este seminario se nos propone responder a una serie de cuestiones relacionand
 
 Para traslaciones:
 - transform.position Asigna una posición absoluta en el espacio 3D
-- transform.Translate(Vector3 desplazamiento) Suma a la posición actual del objeto cada coordenada del vector pasado como argumento
+- transform.Translate(Vector3 desplazamiento) Suma a la posición actual del objeto cada coordenada del vector pasado como argumento  
 Para rotaciones:
 - transform.rotation = Quaternion.Euler(x, y, z) Rotación absoluta en grados
-- transform.Rotate(Vector3 ángulos) Rotación sumada a la rotación actual del objeto
+- transform.Rotate(Vector3 ángulos) Rotación sumada a la rotación actual del objeto  
 Para escalado:
 - transform.localScale Ajusta el tamaño en cada eje
 
@@ -91,11 +91,11 @@ Esta matriz convierte las coordenadas del mundo al espacio de vista, que es el s
 
 
 12. **Especifica la matriz de la proyección usado en un instante de la ejecución del ejercicio 1 de la práctica 1.**
-
+![Image_ej12](./media/image12.png)
 13. **Especifica la matriz de modelo y vista de la escena del ejercicio 1 de la práctica 1.**
-
+![Image_ej13](./media/image13.png)
 14. **Aplica una rotación en el start de uno de los objetos de la escena y muestra la matriz de cambio al sistema de referencias mundial.**
-
+![Image_ej14](./media/image14.png)
 15. **¿Como puedes calcular las coordenadas del sistema de referencia de un objeto con las siguientes propiedades del Transform?: Position (3, 1, 1), Rotation (45, 0, 45)**
 
 16. **Crea una escena en Unity con los siguientes elementos: cámara principal, plano base (como suelo) y tres cubos de distinto color (rojo, verde, azul) colocados en posiciones distintas en el espacio. Realiza un pequeño script de depuración adjunto a la cámara que permita visualizar en consola o en pantalla las matrices de transformación (Model, View, Projection) y sus resultados sobre un vértice de cada cubo.**
