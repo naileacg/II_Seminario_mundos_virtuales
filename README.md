@@ -38,11 +38,12 @@ El resultado no es el mismo ya que en el primer caso se mueve en la dirección m
 
 3. **Sitúa la esfera de radio 1 en el campo de visión de la cámara y configura un volumen de vista que la recorte parcialmente.**
 
-foto
+![Image_ej3](.media/image3.png)
+
 
 4. **Sitúa la esfera de radio 1 en el campo de visión de la cámara y configura el volumen de vista para que la deje fuera de la vista.**
 
-foto
+![Image_ej4](.media/image4.png)
 
 5. **Como puedes aumentar el ángulo de la cámara. Qué efecto tiene disminuir el ángulo de la cámara.**
 Con el método `camera.fieldOfView` se controla el ángulo de la visión de la cámara.
