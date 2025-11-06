@@ -55,18 +55,45 @@ Sí, la afirmación es correcta. Si cambiamos la propiedad Projection de la cám
 
 7. **Especifica las rotaciones que se han indicado en los ejercicios previos con la utilidad quaternion.**
 
+En el ejercicio 2, se pedía rotar la cámara 30º alrededor del eje Y. Usando quaterniones, esas rotaciones pueden especificarse así:
+
+- Rotación absoluta de 30º alrededor del eje Y
+  - `transform.rotation = Quaternion.AngleAxis(30f, Vector3.up);`
+- Sumandole 30º a la rotación actual (rotación relativa)
+  - `transform.rotation *= Quaternion.AngleAxis(30f, Vector3.up);`
+
+
 8. **¿Como puedes averiguar la matriz de proyección en perspectiva que se ha usado para proyectar la escena al último frame renderizado?.**
 
+En Unity, cada cámara tiene asociada una matriz de proyección. Para averiguar la matriz de proyección en perspectiva usada por la cámara en el último frame renderizado, podemos acceder a la propiedad `projectionMatrix` del componente Camera.
+
+`Matrix4x4 perspectiveMatrix = Camera.main.projectionMatrix;`
+
+
 9. **¿Como puedes averiguar la matriz de proyección en perspectiva ortográfica que se ha usado para proyectar la escena al último frame renderizado?.**
-9. **¿Cómo puedes obtener la matriz de transformación entre el sistema de coordenadas local y el mundial?.**
 
-10. **Cómo puedes obtener la matriz para cambiar al sistema de referencia de vista**
+Cuando la cámara está en modo ortográfico, Unity genera una matriz ortográfica en lugar de una de perspectiva (al contrario que el anterior apartado). Sin embargo, la forma de obtenerla es exactamente la misma. La única diferencia es que nos tenemos que asegurar que la cámara está en modo ortográfico.
 
-11. **Especifica la matriz de la proyección usado en un instante de la ejecución del ejercicio 1 de la práctica 1.**
+`Matrix4x4 orthoMatrix = Camera.main.projectionMatrix;`
 
-12. **Especifica la matriz de modelo y vista de la escena del ejercicio 1 de la práctica 1.**
+10. **¿Cómo puedes obtener la matriz de transformación entre el sistema de coordenadas local y el mundial?.**
 
-13. **Aplica una rotación en el start de uno de los objetos de la escena y muestra la matriz de cambio al sistema de referencias mundial.**
+Esta matriz convierte cualquier punto en coordenadas locales al espacio mundial, y podemos obtenerla mediante la siguiente propiedad:
+
+`Matrix4x4 localToWorld = transform.localToWorldMatrix;`
+
+11. **Cómo puedes obtener la matriz para cambiar al sistema de referencia de vista**
+
+Esta matriz convierte las coordenadas del mundo al espacio de vista, que es el sistema de coordenadas de la cámara. La cámara tiene una propiedad que almacena esta matriz, así que podemos obtenerla de esta manera:
+
+`Matrix4x4 viewMatrix = Camera.main.worldToCameraMatrix;`
+
+
+12. **Especifica la matriz de la proyección usado en un instante de la ejecución del ejercicio 1 de la práctica 1.**
+
+13. **Especifica la matriz de modelo y vista de la escena del ejercicio 1 de la práctica 1.**
+
+14. **Aplica una rotación en el start de uno de los objetos de la escena y muestra la matriz de cambio al sistema de referencias mundial.**
 
 15. **¿Como puedes calcular las coordenadas del sistema de referencia de un objeto con las siguientes propiedades del Transform?: Position (3, 1, 1), Rotation (45, 0, 45)**
 
