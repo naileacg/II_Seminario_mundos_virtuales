@@ -16,10 +16,10 @@ En este seminario se nos propone responder a una serie de cuestiones relacionand
 
 Para traslaciones:
 - transform.position Asigna una posición absoluta en el espacio 3D
-- transform.Translate(Vector3 desplazamiento) Suma a la posición actual del objeto cada coordenada del vector pasado como argumento  
+- transform.Translate(Vector3 desplazamiento) Suma a la posición actual del objeto cada coordenada del vector pasado como argumento    
 Para rotaciones:
 - transform.rotation = Quaternion.Euler(x, y, z) Rotación absoluta en grados
-- transform.Rotate(Vector3 ángulos) Rotación sumada a la rotación actual del objeto  
+- transform.Rotate(Vector3 ángulos) Rotación sumada a la rotación actual del objeto    
 Para escalado:
 - transform.localScale Ajusta el tamaño en cada eje
 
@@ -90,11 +90,11 @@ Esta matriz convierte las coordenadas del mundo al espacio de vista, que es el s
 `Matrix4x4 viewMatrix = Camera.main.worldToCameraMatrix;`
 
 
-12. **Especifica la matriz de la proyección usado en un instante de la ejecución del ejercicio 1 de la práctica 1.**
+12. **Especifica la matriz de la proyección usado en un instante de la ejecución del ejercicio 1 de la práctica 1.**  
 ![Image_ej12](./media/image12.png)
-13. **Especifica la matriz de modelo y vista de la escena del ejercicio 1 de la práctica 1.**
+13. **Especifica la matriz de modelo y vista de la escena del ejercicio 1 de la práctica 1.**  
 ![Image_ej13](./media/image13.png)
-14. **Aplica una rotación en el start de uno de los objetos de la escena y muestra la matriz de cambio al sistema de referencias mundial.**
+14. **Aplica una rotación en el start de uno de los objetos de la escena y muestra la matriz de cambio al sistema de referencias mundial.**  
 ![Image_ej14](./media/image14.png)
 15. **¿Como puedes calcular las coordenadas del sistema de referencia de un objeto con las siguientes propiedades del Transform?: Position (3, 1, 1), Rotation (45, 0, 45)**
 
