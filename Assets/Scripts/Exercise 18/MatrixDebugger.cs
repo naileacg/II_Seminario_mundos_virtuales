@@ -11,26 +11,28 @@ public class MatrixDebugger : MonoBehaviour
 
     void Update()
     {
-        // --- 1. Mover el cubo ---
         float moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         float moveZ = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
 
         cube.Translate(new Vector3(moveX, 0, moveZ), Space.World);
 
-        // Rotar cubo con Q/E
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
-            cube.Rotate(Vector3.up, rotationSpeed * Time.deltaTime, Space.World);
             PrintMatrixes();
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Q))
         {
             cube.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime, Space.World);
             PrintMatrixes();
         }
 
-        // --- 2. Rotar cámara ---
+        if (Input.GetKey(KeyCode.E))
+        {
+            cube.Rotate(Vector3.up, rotationSpeed * Time.deltaTime, Space.World);
+            PrintMatrixes();
+        }
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             mainCamera.transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime, Space.World);
@@ -43,15 +45,12 @@ public class MatrixDebugger : MonoBehaviour
             PrintMatrixes();
         }
 
-        // --- 3. Cambiar proyección ---
         if (Input.GetKeyDown(KeyCode.P))
         {
             isPerspective = !isPerspective;
             mainCamera.orthographic = !isPerspective;
             PrintMatrixes();
         }
-
-        // --- Mostrar matrices ---
     }
 
     void PrintMatrixes()
