@@ -243,4 +243,4 @@ MatrixDebugger:PrintMatrixes () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs
 MatrixDebugger:Update () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:21)
 ```
 
-![video_ej18](media/video18.mp4)
+![video_ej18](media/video18.gif)
