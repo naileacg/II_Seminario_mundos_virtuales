@@ -209,3 +209,34 @@ Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:18)
 Para ver el código mire el [código](Assets/Scripts/Exercise%2018/MatrixDebugger.cs)
 
 El cúbo se puede mover con el wasd, mientras que la camara con las flechas además para rotar el cubo empleas la q, y la e. Por otro lado para cambiar de perspectiva necesito la p
+
+Salida de ejemplo cuanod se mueve algún objeto
+
+```
+Model Matrix (Cube):
+1,00 0,00 0,00 -3,56
+0,00 1,00 0,00 0,50
+0,00 0,00 1,00 -2,84
+0,00 0,00 0,00 1,00
+UnityEngine.Debug:Log (object)
+MatrixDebugger:PrintMatrixes () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:58)
+MatrixDebugger:Update () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:21)
+
+View Matrix (Camera):
+1,00 0,00 0,04 1,54
+-0,02 0,91 0,42 0,30
+0,04 0,42 -0,91 -16,29
+0,00 0,00 0,00 1,00
+UnityEngine.Debug:Log (object)
+MatrixDebugger:PrintMatrixes () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:59)
+MatrixDebugger:Update () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:21)
+
+Projection Matrix (Camera):
+0,91 0,00 0,00 0,00
+0,00 1,73 0,00 0,00
+0,00 0,00 -1,00 -0,60
+0,00 0,00 -1,00 0,00
+UnityEngine.Debug:Log (object)
+MatrixDebugger:PrintMatrixes () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:60)
+MatrixDebugger:Update () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:21)
+```
