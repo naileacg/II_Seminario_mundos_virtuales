@@ -99,6 +99,7 @@ Esta matriz convierte las coordenadas del mundo al espacio de vista, que es el s
 14. **Aplica una rotación en el start de uno de los objetos de la escena y muestra la matriz de cambio al sistema de referencias mundial.**  
 ![Image_ej14](./media/image14.png)
 15. **¿Como puedes calcular las coordenadas del sistema de referencia de un objeto con las siguientes propiedades del Transform?: Position (3, 1, 1), Rotation (45, 0, 45)**
+Para calcular las coordenadas del sistema de referencia de un objeto en Unity usando sus propiedades del Transform (position, rotation y scale), se puede aplicar la matriz de transformación generada por estas propiedades. En Unity, las propiedades Position, Rotation, y Scale se combinan para formar la matriz de transformación localToWorldMatrix, que define cómo pasar las coordenadas del sistema de referencia local, el del objeto, a coordenadas en el sistema de referencia mundial.
 
 16. **Crea una escena en Unity con los siguientes elementos: cámara principal, plano base (como suelo) y tres cubos de distinto color (rojo, verde, azul) colocados en posiciones distintas en el espacio. Realiza un pequeño script de depuración adjunto a la cámara que permita visualizar en consola o en pantalla las matrices de transformación (Model, View, Projection) y sus resultados sobre un vértice de cada cubo.**
 
