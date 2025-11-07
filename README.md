@@ -105,6 +105,100 @@ Para calcular las coordenadas del sistema de referencia de un objeto en Unity us
 
 Para ver el código mire el [código](Assets/Scripts/Exercise%2016/Debugger.cs)
 
+La salida de todos los elementos creados son:
+
+```
+model matrix (CubeRed):
+1.00000	0.00000	0.00000	3.50000
+0.00000	1.00000	0.00000	1.00000
+0.00000	0.00000	1.00000	0.50000
+0.00000	0.00000	0.00000	1.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:31)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:16)
+
+view matrix (Cámara):
+1.00000	0.00000	0.00000	0.91000
+0.00000	0.90631	0.42262	0.32322
+0.00000	0.42262	-0.90631	-16.33375
+0.00000	0.00000	0.00000	1.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:32)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:16)
+
+projection matrix (Cámara):
+0.91401	0.00000	0.00000	0.00000
+0.00000	1.73205	0.00000	0.00000
+0.00000	0.00000	-1.00060	-0.60018
+0.00000	0.00000	-1.00000	0.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:33)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:16)
+
+model matrix (CubeGreen):
+1.00000	0.00000	0.00000	0.50000
+0.00000	1.00000	0.00000	1.00000
+0.00000	0.00000	1.00000	5.50000
+0.00000	0.00000	0.00000	1.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:31)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:17)
+
+view matrix (Cámara):
+1.00000	0.00000	0.00000	0.91000
+0.00000	0.90631	0.42262	0.32322
+0.00000	0.42262	-0.90631	-16.33375
+0.00000	0.00000	0.00000	1.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:32)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:17)
+
+projection matrix (Cámara):
+0.91401	0.00000	0.00000	0.00000
+0.00000	1.73205	0.00000	0.00000
+0.00000	0.00000	-1.00060	-0.60018
+0.00000	0.00000	-1.00000	0.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:33)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:17)
+
+model matrix (CubeBlue):
+1.00000	0.00000	0.00000	-4.50000
+0.00000	1.00000	0.00000	1.00000
+0.00000	0.00000	1.00000	0.50000
+0.00000	0.00000	0.00000	1.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:31)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:18)
+
+view matrix (Cámara):
+1.00000	0.00000	0.00000	0.91000
+0.00000	0.90631	0.42262	0.32322
+0.00000	0.42262	-0.90631	-16.33375
+0.00000	0.00000	0.00000	1.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:32)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:18)
+
+projection matrix (Cámara):
+0.91401	0.00000	0.00000	0.00000
+0.00000	1.73205	0.00000	0.00000
+0.00000	0.00000	-1.00060	-0.60018
+0.00000	0.00000	-1.00000	0.00000
+
+UnityEngine.Debug:Log (object)
+Debugger:PrintMatrixes (UnityEngine.Transform,string) (at Assets/Scripts/Exercise 16/Debugger.cs:33)
+Debugger:Start () (at Assets/Scripts/Exercise 16/Debugger.cs:18)
+```
+
 17. **Dibujar en un programa de dibujo el recorrido de las coordenadas de un vértice específico del cubo rojo:**
 `Local → World → Camera/View → Clip → NDC → Viewport`. **Indicar cómo cambia su valor en cada espacio. Aplicar la transformación manualmente a un punto (por ejemplo, el vértice (0.5, 0.5, 0.5)) y registrar los resultados paso a paso.**
 
