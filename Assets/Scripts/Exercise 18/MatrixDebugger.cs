@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class MatrixDebugger : MonoBehaviour
 {
-    public Transform cube;       // Asigna el cubo en el Inspector
-    public Camera mainCamera;    // Asigna la cámara principal
+    public Transform cube;
+    public Camera mainCamera;
     public float rotationSpeed = 50f;
     public float moveSpeed = 2f;
 
