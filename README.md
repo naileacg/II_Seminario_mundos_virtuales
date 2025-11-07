@@ -54,6 +54,7 @@ Con el método `camera.fieldOfView` se controla el ángulo de la visión de la c
 
 
 6. **Es correcta la siguiente afirmación: Para realizar la proyección al espacio 2D, en el inspector de la cámara, cambiaremos el valor de projection, asignándole el valor de orthographic**
+
 Sí, la afirmación es correcta. Si cambiamos la propiedad Projection de la cámara a Orthographic en el inspector de Unity, la cámara generará una vista sin perspectiva, que  muestra los objetos del mismo tamaño obviando la distancia a la que estén situados. En  el modo ortográfico, el espacio de visionado se comporta como una caja rectangular, mientras que en perspectiva lo hace en forma de pirámide truncada, causando que los objetos lejanos se vean más pequeños.
 
 7. **Especifica las rotaciones que se han indicado en los ejercicios previos con la utilidad quaternion.**
@@ -99,6 +100,7 @@ Esta matriz convierte las coordenadas del mundo al espacio de vista, que es el s
 14. **Aplica una rotación en el start de uno de los objetos de la escena y muestra la matriz de cambio al sistema de referencias mundial.**  
 ![Image_ej14](./media/image14.png)
 15. **¿Como puedes calcular las coordenadas del sistema de referencia de un objeto con las siguientes propiedades del Transform?: Position (3, 1, 1), Rotation (45, 0, 45)**  
+
 Para calcular las coordenadas del sistema de referencia de un objeto en Unity usando sus propiedades del Transform (position, rotation y scale), se puede aplicar la matriz de transformación generada por estas propiedades. En Unity, las propiedades Position, Rotation, y Scale se combinan para formar la matriz de transformación localToWorldMatrix, que define cómo pasar las coordenadas del sistema de referencia local, el del objeto, a coordenadas en el sistema de referencia mundial.
 
 16. **Crea una escena en Unity con los siguientes elementos: cámara principal, plano base (como suelo) y tres cubos de distinto color (rojo, verde, azul) colocados en posiciones distintas en el espacio. Realiza un pequeño script de depuración adjunto a la cámara que permita visualizar en consola o en pantalla las matrices de transformación (Model, View, Projection) y sus resultados sobre un vértice de cada cubo.**
@@ -240,3 +242,5 @@ UnityEngine.Debug:Log (object)
 MatrixDebugger:PrintMatrixes () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:60)
 MatrixDebugger:Update () (at Assets/Scripts/Exercise 18/MatrixDebugger.cs:21)
 ```
+
+![video_ej18](media/video18.mp4)
