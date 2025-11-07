@@ -113,3 +113,5 @@ Para ver el código mire el [código](Assets/Scripts/Exercise%2016/Debugger.cs)
 18. **Mover o rotar uno de los cubos y mostrar cómo cambian los valores de su matriz de modelo. Rotar la cámara y mostrar cómo se modifica la matriz de vista. Cambiar entre proyección ortográfica y perspectiva y comparar las diferencias numéricas en la matriz de proyección.**
 
 Para ver el código mire el [código](Assets/Scripts/Exercise%2018/MatrixDebugger.cs)
+
+El cúbo se puede mover con el wasd, mientras que la camara con las flechas además para rotar el cubo empleas la q, y la e. Por otro lado para cambiar de perspectiva necesito la p
